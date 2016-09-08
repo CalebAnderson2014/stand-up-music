@@ -3,7 +3,7 @@ import schedule from 'node-schedule';
 
 export default class StandUp extends Component{
   componentWillMount() {
-    var j = schedule.scheduleJob({hour: 17, minute: 58}, function(){
+    var j = schedule.scheduleJob({hour: 18, minute: 14}, function(){
       console.log('Playing music');
       playMusic();
     });
