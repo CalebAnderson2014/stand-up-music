@@ -1,11 +1,11 @@
 import React from 'react';
-import CardWindow from './CardWindow';
+import StandUp from './StandUp';
 
 export default class App extends React.Component{
 
   render() {
     return <div>
-             <CardWindow />
+             <StandUp />
            </div>
   }
 }
