@@ -30,7 +30,7 @@ export default class StandUp extends Component{
           <button type="submit"> Save changes! </button>
         </form>
         {this.state.displayHour ?
-        <span> Song will play at {this.state.displayHour} : {this.state.displayMinute} {this.state.displayStr} every day!</span>
+        <span> Song will play at {this.state.displayHour}:{this.state.displayMinute} {this.state.displayStr} every day!</span>
         :
         <span> Select a time to play music at every day!</span>
         }
