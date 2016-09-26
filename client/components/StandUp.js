@@ -46,8 +46,11 @@ function handleTimeChange(time, mode) {
 }
 function playMusic() {
   let marley = new Audio('GetUpStandUp.mp3');
-
-  marley.play();
+  let luda = new Audio('LudacrisStandUp.mp3');
+  let playlist = [marley, luda];
+  let selectedSong = Math.floor(Math.random() * playlist.length);
+  
+  playlist[selectedSong].play();
 }
 
 function militaryConverter(hour) {
@@ -75,5 +78,3 @@ function handleSubmit() {
     playMusic();
   });
 }
-
-
