@@ -57,7 +57,7 @@ function militaryConverter(hour) {
     return {hour: hour, str: 'PM'}
   } else {
     let newHour = hour - 12
-    return {hour: hour, str: 'PM'}
+    return {hour: newHour, str: 'PM'}
   }
 }
 
