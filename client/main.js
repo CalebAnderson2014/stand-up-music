@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 // Import React component from PetShopWindow
-import App from './components/App';
+import StandUp from './components/StandUp';
 
 // Render that component to the DOM!
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<StandUp />, document.getElementById('app'));
