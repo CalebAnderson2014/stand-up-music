@@ -3,13 +3,14 @@ import schedule from 'node-schedule';
 
 let j;
 let marley = new Audio('GetUpStandUp.mp3');
-let luda = new Audio('StandUp.m4a');
+let luda = new Audio('StandUp.mp3');
 let champions = new Audio('StandUpForTheChampions.mp3')
 let playlist = [
   {title: "Get up, stand up - Bob Marley", audio: marley},
   {title: "Stand up - Ludacris", audio: luda},
   {title: "Stand up for the champions - Right said Fred", audio: champions}
 ];
+
 
 export default class StandUp extends Component{
   constructor(props) {
@@ -44,13 +45,23 @@ export default class StandUp extends Component{
           {generateList()}
         </select>
         {this.state.displayHour ?
-        <span> {this.state.displaySongTitle} will play at {this.state.displayHour}:{this.state.displayMinute} {this.state.displayStr} every day!</span>
+        <div> {this.state.displaySongTitle} will play at {this.state.displayHour}:{this.state.displayMinute} {this.state.displayStr} every day!</div>
         :
-        <span> Select a time to play music at every day!</span>
+        <div> Select a time to play music at every day!</div>
         }
+        <br/>
+        <br/>
+        <div>Bob Ross remix for emergency purposes</div>
+        <Ross />
       </div>
     )
   }
+}
+
+function Ross() {
+  return  <video width="800" controls>
+            <source src="BobRoss.mp4" type="video/mp4" />
+          </video>
 }
 
 function handleSongChange(event) {
