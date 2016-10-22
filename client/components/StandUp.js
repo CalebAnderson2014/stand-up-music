@@ -32,7 +32,7 @@ export default class StandUp extends Component{
 
   render() {
     return (
-      <div>
+      <div className="main">
         <form onSubmit={e => {
           e.preventDefault()
           handleSubmit()
@@ -44,7 +44,7 @@ export default class StandUp extends Component{
         <select onChange={handleSongChange}>
           {generateList()}
         </select>
-        {this.state.displayHour ?
+        {this.state.displayHour !== null ?
         <div> {this.state.displaySongTitle} will play at {this.state.displayHour}:{this.state.displayMinute} {this.state.displayStr} every day!</div>
         :
         <div> Select a time to play music at every day!</div>
@@ -59,7 +59,7 @@ export default class StandUp extends Component{
 }
 
 function Ross() {
-  return  <video width="800" controls>
+  return  <video className="TheRoss" width="800" controls>
             <source src="BobRoss.mp4" type="video/mp4" />
           </video>
 }
@@ -86,10 +86,12 @@ function playMusic() {
 }
 
 function militaryConverter(hour) {
-  if(hour < 12) {
-    return {hour: hour, str: 'AM'}
+  if(hour === 0) {
+    return {hour: 12, str: 'AM'}
   } else if(hour === 12) {
     return {hour: hour, str: 'PM'}
+  } else if(hour < 12) {
+    return {hour: hour, str: 'AM'}
   } else {
     let newHour = hour - 12
     return {hour: newHour, str: 'PM'}

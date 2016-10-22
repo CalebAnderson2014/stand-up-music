@@ -1,7 +1,20 @@
 html {
     height: 100%;
     width: 100%;
-    background-image: url('http://d3rl9k0c1p2vl5.cloudfront.net/assets/resized/sm/upload/tz/u1/zh/tg/Get%20Up%20Stand%20Up%202000PX-600-600-600-600-crop-1.jpg?k=b193d9797e');
+    background-image: url('http://cdn.wallpapersafari.com/38/27/eoNzCq.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+
+.main {
+  background-color: rgba(155,155,155,0.86);
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 13px;
+  display: flexbox;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 15px; /* Header Height */
+  bottom: 11px; /* Footer Height */
+  width:803px;
 }
